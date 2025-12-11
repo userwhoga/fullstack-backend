@@ -9,6 +9,9 @@ COPY gradle gradle
 # Copy source code
 COPY src src
 
+# Make gradlew executable
+RUN chmod +x gradlew
+
 # Build application
 RUN ./gradlew build -x test
 
